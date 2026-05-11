@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SunsetScan - Open-source EOL and network security scanning</title>
+    <meta
+      name="description"
+      content="SunsetScan is the upcoming name for the open-source NetWatch scanner: local network discovery, CVE checks, end-of-life detection, hardware lifecycle intelligence, and plain-English reports."
+    >
+    <meta name="theme-color" content="#141414">
+    <link rel="canonical" href="https://sunsetscan.com/">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SunsetScan - Open-source EOL and network security scanning">
+    <meta
+      property="og:description"
+      content="Find unsupported devices, exposed services, weak configurations, and fixable network risks with the scanner currently published as NetWatch."
+    >
+    <meta property="og:url" content="https://sunsetscan.com/">
+    <meta property="og:image" content="https://sunsetscan.com/assets/sunsetscan-report-preview.png">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SunsetScan",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Linux, WSL2",
+        "softwareHelp": "https://github.com/NoCoderRandom/netwatch",
+        "license": "https://github.com/NoCoderRandom/netwatch/blob/main/LICENSE",
+        "description": "Open-source local network security auditing with CVE checks, end-of-life detection, hardware lifecycle intelligence, and HTML reports."
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="SunsetScan home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>SunsetScan</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+          <span class="sr-only">Open navigation</span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <a href="#scanner">Scanner</a>
+          <a href="#database">EOL database</a>
+          <a href="#reports">Reports</a>
+          <a href="#install">Install</a>
+          <a class="nav-github" href="https://github.com/NoCoderRandom/netwatch">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">Open-source local network security auditing</p>
+          <h1 id="hero-title">SunsetScan</h1>
+          <p class="hero-copy">
+            Find unsupported devices, exposed services, weak configurations, and fixable security risks across your local network.
+          </p>
+          <p class="hero-note">
+            SunsetScan is the public-facing name for the scanner currently published as NetWatch on GitHub.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="https://github.com/NoCoderRandom/netwatch">View open-source project</a>
+            <a class="button button-secondary" href="#install">Install from GitHub</a>
+          </div>
+          <dl class="hero-facts" aria-label="Project facts">
+            <div>
+              <dt>License</dt>
+              <dd>MIT scanner</dd>
+            </div>
+            <div>
+              <dt>Scans</dt>
+              <dd>Read-only</dd>
+            </div>
+            <div>
+              <dt>Runtime</dt>
+              <dd>Offline capable</dd>
+            </div>
+            <div>
+              <dt>Updates</dt>
+              <dd>Monthly release rhythm</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="intro-band" id="scanner" aria-labelledby="scanner-title">
+        <div class="container section-grid">
+          <div class="section-copy">
+            <p class="eyebrow">Built for home networks and small IT teams</p>
+            <h2 id="scanner-title">Nmap depth without making people learn nmap syntax.</h2>
+          </div>
+          <div class="section-body">
+            <p>
+              SunsetScan discovers active devices, fingerprints services and hardware, checks software and product lifecycle status, and produces a plain-English report that explains what was found and what to fix next.
+            </p>
+            <p>
+              The scanner is local, read-only, and designed for practical network hygiene: routers, switches, cameras, NAS devices, printers, access points, web interfaces, SSH, SMB, SNMP, FTP, TLS, DNS, UPnP, and mDNS.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-band" aria-labelledby="checks-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">What it checks</p>
+            <h2 id="checks-title">Security findings that map to real maintenance work.</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-kicker">Discovery</span>
+              <h3>Know what is online</h3>
+              <p>Fast host discovery, flexible target input, MAC vendor lookup, hostname resolution, service detection, and optional passive evidence from mDNS, SSDP, and DHCP.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-kicker">Exposure</span>
+              <h3>Find weak services</h3>
+              <p>Checks for insecure protocols, anonymous FTP, SMBv1, missing web headers, exposed admin panels, UPnP exposure, and risky TLS or SSH configurations.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-kicker">Intelligence</span>
+              <h3>Connect versions to risk</h3>
+              <p>Correlates detected service versions with CVE data, software EOL records, and hardware lifecycle data without calling external APIs during the scan.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-kicker">Reporting</span>
+              <h3>Explain the next step</h3>
+              <p>Generates self-contained HTML and JSON reports with risk scores, severity groups, evidence, plain-English explanations, and prioritized recommendations.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="database-band" id="database" aria-labelledby="database-title">
+        <div class="container database-layout">
+          <div class="database-copy">
+            <p class="eyebrow">End-of-life intelligence</p>
+            <h2 id="database-title">A lifecycle database focused on the devices people actually keep running.</h2>
+            <p>
+              SunsetScan uses software EOL data from endoflife.date and a dedicated hardware lifecycle database for network gear, cameras, printers, NAS devices, security appliances, access points, and related modules.
+            </p>
+            <p>
+              The hardware database is continuously maintained and packaged into the scanner update cycle. The public plan is a monthly scanner and database refresh, so users can update the tool and the lifecycle data together.
+            </p>
+          </div>
+
+          <div class="metric-grid" aria-label="Current hardware EOL database snapshot">
+            <div class="metric-card">
+              <span class="metric-value">59,969</span>
+              <span class="metric-label">hardware lifecycle records</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">47,341</span>
+              <span class="metric-label">model summaries</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">35,786</span>
+              <span class="metric-label">records not receiving security updates</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">5</span>
+              <span class="metric-label">compressed record shards</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container database-notes">
+          <article>
+            <h3>Cautious by design</h3>
+            <p>Ambiguous vendor EOL or discontinued signals are treated as lifecycle review items unless the source confirms that support or security updates have stopped.</p>
+          </article>
+          <article>
+            <h3>Offline during scans</h3>
+            <p>Setup and update commands refresh local caches. Actual scans read local data, which keeps assessments predictable and usable without internet access.</p>
+          </article>
+          <article>
+            <h3>Separate database license</h3>
+            <p>The scanner code is MIT licensed. The hardware EOL database artifacts are distributed under CC BY-NC 4.0.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="workflow-band" aria-labelledby="workflow-title">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">How it works</p>
+            <h2 id="workflow-title">From discovery to a prioritized action list.</h2>
+          </div>
+
+          <ol class="workflow-list">
+            <li>
+              <span class="step-number">01</span>
+              <h3>Scan the local network</h3>
+              <p>Run a quick inventory, an IoT-focused pass, or a full assessment against a subnet or host list.</p>
+            </li>
+            <li>
+              <span class="step-number">02</span>
+              <h3>Fuse device identity</h3>
+              <p>Combine MAC OUI, banners, HTTP fingerprints, TLS certificates, SSH, UPnP, SNMP, Wappalyzer, mDNS, JA3S, and port heuristics.</p>
+            </li>
+            <li>
+              <span class="step-number">03</span>
+              <h3>Check CVE and EOL data</h3>
+              <p>Map detected versions and models against local CVE, software lifecycle, and hardware lifecycle caches.</p>
+            </li>
+            <li>
+              <span class="step-number">04</span>
+              <h3>Produce the report</h3>
+              <p>Review severity, risk scores, evidence, and numbered remediation steps in a self-contained HTML file.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="report-band" id="reports" aria-labelledby="reports-title">
+        <div class="container report-layout">
+          <div class="report-copy">
+            <p class="eyebrow">Reports people can act on</p>
+            <h2 id="reports-title">A scanner is only useful when the output is understandable.</h2>
+            <p>
+              SunsetScan reports group findings by severity and host, show per-device risk scores, and explain each item in direct language: what was found, why it matters, and what to do next.
+            </p>
+            <ul class="plain-list">
+              <li>Self-contained HTML report with no external dependencies.</li>
+              <li>JSON export for automation, archival, or follow-up tooling.</li>
+              <li>Scan history and diffing to identify new hosts, closed ports, and resolved findings.</li>
+            </ul>
+          </div>
+
+          <figure class="report-preview">
+            <img src="assets/sunsetscan-report-preview.png" alt="Preview of a SunsetScan network assessment report with severity counts, EOL status, and prioritized findings" width="1440" height="960" loading="lazy">
+            <figcaption>Product-style report preview based on current NetWatch capabilities.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="install-band" id="install" aria-labelledby="install-title">
+        <div class="container install-layout">
+          <div>
+            <p class="eyebrow">Install today</p>
+            <h2 id="install-title">Use the current NetWatch repository while the rename is prepared.</h2>
+            <p>
+              The code is open source and available now. Linux is the best supported platform, and WSL2 is the recommended route for Windows users.
+            </p>
+          </div>
+
+          <div class="command-panel" aria-label="Installation commands">
+            <div class="command-header">
+              <span>Recommended bootstrap</span>
+              <button class="copy-button" type="button" data-copy="curl -fsSL https://raw.githubusercontent.com/NoCoderRandom/netwatch/main/bootstrap.sh | bash">Copy</button>
+            </div>
+            <pre><code>curl -fsSL https://raw.githubusercontent.com/NoCoderRandom/netwatch/main/bootstrap.sh | bash</code></pre>
+            <div class="command-header">
+              <span>First assessment</span>
+              <button class="copy-button" type="button" data-copy="sudo ./netwatch --setup&#10;sudo ./netwatch --full-assessment --target 192.168.1.0/24">Copy</button>
+            </div>
+            <pre><code>sudo ./netwatch --setup
+sudo ./netwatch --full-assessment --target 192.168.1.0/24</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="open-source-band" aria-labelledby="opensource-title">
+        <div class="container open-source-layout">
+          <div>
+            <p class="eyebrow">Open source</p>
+            <h2 id="opensource-title">Transparent scanner, practical defaults, monthly maintenance.</h2>
+          </div>
+          <div class="open-source-copy">
+            <p>
+              SunsetScan will stay tied to the public GitHub project during the rename. The site links directly to the existing source, release history, issue tracker, and installation instructions so users can inspect the tool before running it.
+            </p>
+            <div class="link-row">
+              <a class="text-link" href="https://github.com/NoCoderRandom/netwatch">Source code</a>
+              <a class="text-link" href="https://github.com/NoCoderRandom/netwatch/releases">Releases</a>
+              <a class="text-link" href="https://github.com/NoCoderRandom/netwatch/issues">Issues</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <a class="brand footer-brand" href="#top">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span>SunsetScan</span>
+          </a>
+          <p>Currently published as NetWatch. Built for local, read-only network security auditing.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/NoCoderRandom/netwatch">GitHub</a>
+          <a href="https://github.com/NoCoderRandom/netwatch/blob/main/LICENSE">MIT license</a>
+          <a href="https://creativecommons.org/licenses/by-nc/4.0/">Database license</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
