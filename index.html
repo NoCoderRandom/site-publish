@@ -6,10 +6,10 @@
     <title>SunsetScan - Open-source EOL and network security scanning</title>
     <meta
       name="description"
-      content="SunsetScan is the upcoming name for the open-source NetWatch scanner: local network discovery, CVE checks, end-of-life detection, hardware lifecycle intelligence, and plain-English reports."
+      content="SunsetScan is an open-source local network security scanner with device discovery, CVE checks, end-of-life detection, hardware lifecycle intelligence, and plain-English reports."
     >
     <meta name="theme-color" content="#141414">
-    <link rel="canonical" href="https://sunsetscan.com/">
+    <link rel="canonical" href="http://www.sunsetscan.com/">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
 
@@ -17,10 +17,10 @@
     <meta property="og:title" content="SunsetScan - Open-source EOL and network security scanning">
     <meta
       property="og:description"
-      content="Find unsupported devices, exposed services, weak configurations, and fixable network risks with the scanner currently published as NetWatch."
+      content="Find unsupported devices, exposed services, weak configurations, and fixable network risks with SunsetScan."
     >
-    <meta property="og:url" content="https://sunsetscan.com/">
-    <meta property="og:image" content="https://sunsetscan.com/assets/sunsetscan-report-preview.png">
+    <meta property="og:url" content="http://www.sunsetscan.com/">
+    <meta property="og:image" content="http://www.sunsetscan.com/assets/sunsetscan-report-preview.png">
 
     <script type="application/ld+json">
       {
@@ -29,8 +29,11 @@
         "name": "SunsetScan",
         "applicationCategory": "SecurityApplication",
         "operatingSystem": "Linux, WSL2",
-        "softwareHelp": "https://github.com/NoCoderRandom/netwatch",
-        "license": "https://github.com/NoCoderRandom/netwatch/blob/main/LICENSE",
+        "softwareVersion": "2.0.0",
+        "url": "http://www.sunsetscan.com/",
+        "sameAs": "https://github.com/NoCoderRandom/sunsetscan",
+        "softwareHelp": "https://github.com/NoCoderRandom/sunsetscan",
+        "license": "https://github.com/NoCoderRandom/sunsetscan/blob/main/LICENSE",
         "description": "Open-source local network security auditing with CVE checks, end-of-life detection, hardware lifecycle intelligence, and HTML reports."
       }
     </script>
@@ -57,7 +60,7 @@
           <a href="#database">EOL database</a>
           <a href="#reports">Reports</a>
           <a href="#install">Install</a>
-          <a class="nav-github" href="https://github.com/NoCoderRandom/netwatch">GitHub</a>
+          <a class="nav-github" href="https://github.com/NoCoderRandom/sunsetscan">GitHub</a>
         </nav>
       </div>
     </header>
@@ -72,10 +75,10 @@
             Find unsupported devices, exposed services, weak configurations, and fixable security risks across your local network.
           </p>
           <p class="hero-note">
-            SunsetScan is the public-facing name for the scanner currently published as NetWatch on GitHub.
+            SunsetScan is published on GitHub as an MIT-licensed scanner for local, read-only network auditing.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button button-primary" href="https://github.com/NoCoderRandom/netwatch">View open-source project</a>
+            <a class="button button-primary" href="https://github.com/NoCoderRandom/sunsetscan">View open-source project</a>
             <a class="button button-secondary" href="#install">Install from GitHub</a>
           </div>
           <dl class="hero-facts" aria-label="Project facts">
@@ -92,8 +95,8 @@
               <dd>Offline capable</dd>
             </div>
             <div>
-              <dt>Updates</dt>
-              <dd>Monthly release rhythm</dd>
+              <dt>Version</dt>
+              <dd>2.0.0</dd>
             </div>
           </dl>
         </div>
@@ -246,7 +249,7 @@
 
           <figure class="report-preview">
             <img src="assets/sunsetscan-report-preview.png" alt="Preview of a SunsetScan network assessment report with severity counts, EOL status, and prioritized findings" width="1440" height="960" loading="lazy">
-            <figcaption>Product-style report preview based on current NetWatch capabilities.</figcaption>
+            <figcaption>Product-style report preview based on SunsetScan 2.0.0 capabilities.</figcaption>
           </figure>
         </div>
       </section>
@@ -255,7 +258,7 @@
         <div class="container install-layout">
           <div>
             <p class="eyebrow">Install today</p>
-            <h2 id="install-title">Use the current NetWatch repository while the rename is prepared.</h2>
+            <h2 id="install-title">Install SunsetScan from the current GitHub repository.</h2>
             <p>
               The code is open source and available now. Linux is the best supported platform, and WSL2 is the recommended route for Windows users.
             </p>
@@ -264,15 +267,15 @@
           <div class="command-panel" aria-label="Installation commands">
             <div class="command-header">
               <span>Recommended bootstrap</span>
-              <button class="copy-button" type="button" data-copy="curl -fsSL https://raw.githubusercontent.com/NoCoderRandom/netwatch/main/bootstrap.sh | bash">Copy</button>
+              <button class="copy-button" type="button" data-copy="curl -fsSL https://raw.githubusercontent.com/NoCoderRandom/sunsetscan/main/bootstrap.sh | bash">Copy</button>
             </div>
-            <pre><code>curl -fsSL https://raw.githubusercontent.com/NoCoderRandom/netwatch/main/bootstrap.sh | bash</code></pre>
+            <pre><code>curl -fsSL https://raw.githubusercontent.com/NoCoderRandom/sunsetscan/main/bootstrap.sh | bash</code></pre>
             <div class="command-header">
               <span>First assessment</span>
-              <button class="copy-button" type="button" data-copy="sudo ./netwatch --setup&#10;sudo ./netwatch --full-assessment --target 192.168.1.0/24">Copy</button>
+              <button class="copy-button" type="button" data-copy="sudo ./sunsetscan --setup&#10;sudo ./sunsetscan --full-assessment --target 192.168.1.0/24">Copy</button>
             </div>
-            <pre><code>sudo ./netwatch --setup
-sudo ./netwatch --full-assessment --target 192.168.1.0/24</code></pre>
+            <pre><code>sudo ./sunsetscan --setup
+sudo ./sunsetscan --full-assessment --target 192.168.1.0/24</code></pre>
           </div>
         </div>
       </section>
@@ -285,12 +288,12 @@ sudo ./netwatch --full-assessment --target 192.168.1.0/24</code></pre>
           </div>
           <div class="open-source-copy">
             <p>
-              SunsetScan will stay tied to the public GitHub project during the rename. The site links directly to the existing source, release history, issue tracker, and installation instructions so users can inspect the tool before running it.
+              SunsetScan is developed in the public GitHub repository. The site links directly to the source, release history, issue tracker, and installation instructions so users can inspect the tool before running it.
             </p>
             <div class="link-row">
-              <a class="text-link" href="https://github.com/NoCoderRandom/netwatch">Source code</a>
-              <a class="text-link" href="https://github.com/NoCoderRandom/netwatch/releases">Releases</a>
-              <a class="text-link" href="https://github.com/NoCoderRandom/netwatch/issues">Issues</a>
+              <a class="text-link" href="https://github.com/NoCoderRandom/sunsetscan">Source code</a>
+              <a class="text-link" href="https://github.com/NoCoderRandom/sunsetscan/releases">Releases</a>
+              <a class="text-link" href="https://github.com/NoCoderRandom/sunsetscan/issues">Issues</a>
             </div>
           </div>
         </div>
@@ -304,11 +307,11 @@ sudo ./netwatch --full-assessment --target 192.168.1.0/24</code></pre>
             <span class="brand-mark" aria-hidden="true"></span>
             <span>SunsetScan</span>
           </a>
-          <p>Currently published as NetWatch. Built for local, read-only network security auditing.</p>
+          <p>Open-source local, read-only network security auditing for Linux and WSL2.</p>
         </div>
         <div class="footer-links">
-          <a href="https://github.com/NoCoderRandom/netwatch">GitHub</a>
-          <a href="https://github.com/NoCoderRandom/netwatch/blob/main/LICENSE">MIT license</a>
+          <a href="https://github.com/NoCoderRandom/sunsetscan">GitHub</a>
+          <a href="https://github.com/NoCoderRandom/sunsetscan/blob/main/LICENSE">MIT license</a>
           <a href="https://creativecommons.org/licenses/by-nc/4.0/">Database license</a>
         </div>
       </div>

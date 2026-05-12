@@ -1,6 +1,6 @@
 # SunsetScan Website
 
-Static homepage for `sunsetscan.com`, the public-facing name for the open-source scanner currently published as NetWatch.
+Static homepage for `www.sunsetscan.com`, the public website for the open-source SunsetScan scanner.
 
 ## Local preview
 
@@ -22,7 +22,7 @@ The repository is ready for GitHub Pages in two ways:
 The `CNAME` file points GitHub Pages at:
 
 ```text
-sunsetscan.com
+www.sunsetscan.com
 ```
 
 After the repository is published, set the domain DNS to GitHub Pages:
@@ -43,15 +43,16 @@ https://nocoderrandom.github.io/sunsetscan.com/
 
 ## Source product
 
-The scanner source remains separate and untouched:
+The scanner source lives in the renamed SunsetScan repository:
 
-https://github.com/NoCoderRandom/netwatch
+https://github.com/NoCoderRandom/sunsetscan
 
 ## Content notes
 
-The homepage currently uses NetWatch data from the public repository and local documentation:
+The homepage currently uses SunsetScan data from the public repository and local documentation:
 
 - MIT licensed scanner.
 - Hardware EOL database artifacts licensed under CC BY-NC 4.0.
+- Current scanner release: 2.0.0.
 - Current hardware EOL snapshot: 59,969 lifecycle records and 47,341 model summaries.
-- Monthly scanner and database refresh positioning, based on the intended SunsetScan release cadence.
+- Monthly scanner and database refresh positioning.

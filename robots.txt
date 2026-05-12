@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sunsetscan.com/sitemap.xml
+Sitemap: http://www.sunsetscan.com/sitemap.xml
