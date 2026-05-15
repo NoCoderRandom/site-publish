@@ -188,7 +188,7 @@ select {
   padding: 8.8rem 0 5.4rem;
   background:
     linear-gradient(90deg, rgba(20, 20, 20, 0.96) 0%, rgba(20, 20, 20, 0.9) 39%, rgba(20, 20, 20, 0.48) 72%, rgba(20, 20, 20, 0.72) 100%),
-    url("assets/sunsetscan-report-preview.png");
+    url("assets/report-preview.png");
   background-position: center, right 8% center;
   background-repeat: no-repeat;
   background-size: cover, min(920px, 72%) auto;
@@ -691,7 +691,7 @@ code {
   place-items: center;
   background:
     linear-gradient(135deg, rgba(20, 20, 20, 0.94), rgba(20, 35, 32, 0.9)),
-    url("assets/sunsetscan-report-preview.png");
+    url("assets/report-preview.png");
   background-position: center;
   background-size: cover;
   color: #fff;
@@ -787,7 +787,7 @@ code {
     padding: 7.2rem 0 4rem;
     background:
       linear-gradient(180deg, rgba(20, 20, 20, 0.95) 0%, rgba(20, 20, 20, 0.86) 54%, rgba(20, 20, 20, 0.92) 100%),
-      url("assets/sunsetscan-report-preview.png");
+      url("assets/report-preview.png");
     background-size: cover, 880px auto;
     background-position: center, center bottom;
   }
