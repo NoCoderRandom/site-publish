@@ -476,9 +476,59 @@ section {
   color: rgba(255, 255, 255, 0.68);
 }
 
-.database-notes {
+.smart-pack-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: 3rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.smart-pack-copy p {
+  margin: 0.75rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.profile-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.profile-card {
+  min-height: 178px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.profile-name,
+.profile-stats {
+  display: block;
+}
+
+.profile-name {
+  color: #fff;
+  font-weight: 780;
+}
+
+.profile-stats {
+  margin-top: 0.25rem;
+  color: #f7b267;
+  font-size: 0.88rem;
+  font-weight: 720;
+}
+
+.profile-card p {
+  margin: 0.75rem 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.94rem;
+}
+
+.database-notes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 3rem;
 }
@@ -722,7 +772,8 @@ code {
   }
 
   .feature-grid,
-  .workflow-list {
+  .workflow-list,
+  .database-notes {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -730,9 +781,14 @@ code {
   .database-layout,
   .report-layout,
   .install-layout,
-  .open-source-layout {
+  .open-source-layout,
+  .smart-pack-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -807,6 +863,7 @@ code {
   .hero-facts,
   .metric-grid,
   .database-notes,
+  .profile-grid,
   .feature-grid,
   .workflow-list {
     grid-template-columns: 1fr;

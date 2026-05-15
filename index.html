@@ -157,30 +157,81 @@
             <p class="eyebrow">End-of-life intelligence</p>
             <h2 id="database-title">A lifecycle database focused on the devices people actually keep running.</h2>
             <p>
-              SunsetScan uses software EOL data from endoflife.date and a dedicated hardware lifecycle database for network gear, cameras, printers, NAS devices, security appliances, access points, and related modules.
+              SunsetScan uses software EOL data from endoflife.date and a dedicated hardware lifecycle database for network gear, cameras, printers, NAS devices, security appliances, access points, service-provider equipment, and industrial/OT devices.
             </p>
             <p>
-              The hardware database is continuously maintained and packaged into the scanner update cycle. The public plan is a monthly scanner and database refresh, so users can update the tool and the lifecycle data together.
+              The hardware database now ships as smart EOL profiles, so a home install can stay small while office, enterprise, industrial, service-provider, and full profiles remain available for broader environments.
             </p>
           </div>
 
           <div class="metric-grid" aria-label="Current hardware EOL database snapshot">
             <div class="metric-card">
-              <span class="metric-value">59,969</span>
+              <span class="metric-value">64,245</span>
               <span class="metric-label">hardware lifecycle records</span>
             </div>
             <div class="metric-card">
-              <span class="metric-value">47,341</span>
+              <span class="metric-value">51,452</span>
               <span class="metric-label">model summaries</span>
             </div>
             <div class="metric-card">
-              <span class="metric-value">35,786</span>
-              <span class="metric-label">records not receiving security updates</span>
+              <span class="metric-value">122</span>
+              <span class="metric-label">represented vendors</span>
             </div>
             <div class="metric-card">
-              <span class="metric-value">5</span>
-              <span class="metric-label">compressed record shards</span>
+              <span class="metric-value">37,560</span>
+              <span class="metric-label">records with security updates confirmed ended</span>
             </div>
+            <div class="metric-card">
+              <span class="metric-value">8,338</span>
+              <span class="metric-label">records with security updates confirmed continuing</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value">6</span>
+              <span class="metric-label">smart-pack profiles</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container smart-pack-layout" aria-labelledby="smart-pack-title">
+          <div class="smart-pack-copy">
+            <p class="eyebrow">Smart EOL profiles</p>
+            <h3 id="smart-pack-title">Download only the device coverage you need.</h3>
+            <p>
+              Profiles are built from validated local artifacts and loaded during scans without external API calls.
+            </p>
+          </div>
+
+          <div class="profile-grid" aria-label="Hardware EOL smart-pack profiles">
+            <article class="profile-card">
+              <span class="profile-name">Home</span>
+              <span class="profile-stats">14,676 records, 5.07 MiB</span>
+              <p>Consumer routers, cameras, NAS, printers, access points, and smart-home gear.</p>
+            </article>
+            <article class="profile-card">
+              <span class="profile-name">Office</span>
+              <span class="profile-stats">18,939 records, 6.39 MiB</span>
+              <p>Small offices, prosumer labs, managed SMB networks, and ordinary office equipment.</p>
+            </article>
+            <article class="profile-card">
+              <span class="profile-name">Enterprise</span>
+              <span class="profile-stats">58,405 records, 19.77 MiB</span>
+              <p>Campus, datacenter, enterprise security, routing, switching, and mixed networks.</p>
+            </article>
+            <article class="profile-card">
+              <span class="profile-name">Industrial</span>
+              <span class="profile-stats">20,247 records, 6.85 MiB</span>
+              <p>Industrial/OT sites plus the ordinary office network gear often found alongside them.</p>
+            </article>
+            <article class="profile-card">
+              <span class="profile-name">Service provider</span>
+              <span class="profile-stats">62,937 records, 21.58 MiB</span>
+              <p>ISP, carrier, telco, optical, access-network, enterprise, office, and home coverage.</p>
+            </article>
+            <article class="profile-card">
+              <span class="profile-name">Full</span>
+              <span class="profile-stats">64,245 records, 22.04 MiB</span>
+              <p>Every hardware lifecycle record in one local install for the broadest audits.</p>
+            </article>
           </div>
         </div>
 
@@ -191,11 +242,15 @@
           </article>
           <article>
             <h3>Offline during scans</h3>
-            <p>Setup and update commands refresh local caches. Actual scans read local data, which keeps assessments predictable and usable without internet access.</p>
+            <p>Setup and update commands refresh SHA-256 validated local caches. Actual scans read local data, which keeps assessments predictable and usable without internet access.</p>
           </article>
           <article>
             <h3>Separate database license</h3>
             <p>The scanner code is MIT licensed. The hardware EOL database artifacts are distributed under CC BY-NC 4.0.</p>
+          </article>
+          <article>
+            <h3>Quality-gated sources</h3>
+            <p>Raw vendor directories without exact row-level lifecycle evidence stay out of the public database until they can be parsed and reviewed safely.</p>
           </article>
         </div>
       </section>
