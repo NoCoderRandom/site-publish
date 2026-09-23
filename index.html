@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles.css">
     <meta property="og:type" content="website">
     <meta property="og:title" content="SunsetScan — Find EOL devices on your local network">
-    <meta property="og:description" content="Local network scanning with hardware lifecycle evidence from 224 vendors. See real and illustrated report examples.">
+    <meta property="og:description" content="Local network scanning with hardware lifecycle evidence from 224 vendors. See three network hardware example reports.">
     <meta property="og:url" content="https://www.sunsetscan.com/">
     <meta property="og:image" content="https://www.sunsetscan.com/assets/site-preview.png">
     <meta property="og:image:width" content="1200">
@@ -44,6 +44,7 @@
           <a href="#evidence">Lifecycle data</a>
           <a href="#sample">Reports</a>
           <a href="#install">Install</a>
+          <a href="#community">Community</a>
           <a class="nav-github" href="https://github.com/NoCoderRandom/sunsetscan">GitHub ↗</a>
         </nav>
       </div>
@@ -119,9 +120,9 @@
       <section class="sample-section" id="sample" aria-labelledby="sample-title">
         <div class="container">
           <p class="eyebrow">See the output</p><h2 id="sample-title">See the finding. Then see the evidence.</h2>
-          <p class="sample-intro">See the report before you install. Start with a real lab result, then explore router and switch examples grounded in manufacturer lifecycle notices.</p>
+          <p class="sample-intro">See three example reports before you install: a TP-Link lab result, an ASUS router support check and a Cisco switch with a published security support deadline.</p>
           <div class="report-grid">
-            <article class="report-tile"><span class="report-kind">01 / Actual report</span><h3>Real SunsetScan lab report</h3><p>See a TP-Link hardware lifecycle finding alongside exposed services, software EOL results and recommended actions. Generated with v2.1.1 in an authorized Linux lab.</p><div class="report-peek"><span class="peek-severity">HIGH</span><span>TP-Link Archer C7 · Security updates ended</span></div><a href="sample-report.html">Open the real report ↗</a><small><a href="https://github.com/NoCoderRandom/sunsetscan/blob/v2.2.1/docs/sample_reports/sunsetscan_lab_vulnerable_eol_v2_1_1_sample_20260528.html">Original file in the repository</a></small></article>
+            <article class="report-tile"><span class="report-kind">01 / Example report</span><h3>TP-Link Archer C7 example report</h3><p>See a TP-Link hardware lifecycle finding alongside exposed services, software EOL results and recommended actions. Generated with v2.1.1 in an authorized Linux lab.</p><div class="report-peek"><span class="peek-severity">HIGH</span><span>TP-Link Archer C7 · Security updates ended</span></div><a href="sample-report.html">Open the TP-Link example ↗</a><small><a href="https://github.com/NoCoderRandom/sunsetscan/blob/v2.2.1/docs/sample_reports/sunsetscan_lab_vulnerable_eol_v2_1_1_sample_20260528.html">Source report in the repository</a></small></article>
             <article class="report-tile"><span class="report-kind">02 / Example report</span><h3>ASUS router: an EOL listing that needs review</h3><p>An ASUS EOL listing surfaces in the report, with a clear route to check the exact model and firmware support.</p><div class="report-peek"><span class="peek-severity peek-review">REVIEW</span><span>ASUS RT-AC68U · Check vendor support</span></div><a href="example-asus-router.html">Open the ASUS example ↗</a></article>
             <article class="report-tile"><span class="report-kind">03 / Example report</span><h3>Cisco switch: security support has ended</h3><p>Cisco's published security support deadline becomes a concrete replacement priority.</p><div class="report-peek"><span class="peek-severity">HIGH</span><span>Catalyst 2960-S · Security support ended</span></div><a href="example-cisco-switch.html">Open the Cisco example ↗</a></article>
           </div>
@@ -155,8 +156,12 @@ cd sunsetscan
         </div>
       </section>
 
+      <section class="community-section" id="community" aria-labelledby="community-title">
+        <div class="container community-layout"><div><p class="eyebrow">SunsetScan community</p><h2 id="community-title">Found a bug? Have an idea? Tell us.</h2></div><div><p>GitHub Discussions is open for the SunsetScan program. Ask about a scan result, suggest a feature or vendor, report a problem, or share what you would improve.</p><a class="button button-primary" href="https://github.com/NoCoderRandom/sunsetscan/discussions">Join the discussion <span aria-hidden="true">↗</span></a><p class="community-note">For a bug you can reproduce, you can also <a href="https://github.com/NoCoderRandom/sunsetscan/issues">open an issue</a>.</p></div></div>
+      </section>
+
       <section class="closing-section" aria-labelledby="closing-title">
-        <div class="container closing-layout"><div><p class="eyebrow">Open source</p><h2 id="closing-title">Run it on your network. Make unsupported gear visible.</h2></div><div><p>The scanner code is MIT licensed. The hardware lifecycle database has a separate CC BY-NC 4.0 license. Try it on your network. If it helps you spot a device that needs attention, star the repository so more people can find it.</p><div class="closing-links"><a href="https://github.com/NoCoderRandom/sunsetscan">View source / star ↗</a><a href="https://github.com/NoCoderRandom/sunsetscan/issues">Report an issue ↗</a><a href="https://github.com/NoCoderRandom/sunsetscan/blob/v2.2.1/data/hardware_eol/LICENSE.md">Database license ↗</a></div></div></div>
+        <div class="container closing-layout"><div><p class="eyebrow">Open source</p><h2 id="closing-title">Run it on your network. Make unsupported gear visible.</h2></div><div><p>The scanner code is MIT licensed. The hardware lifecycle database has a separate CC BY-NC 4.0 license. Try it on your network. If it helps you spot a device that needs attention, star the repository so more people can find it.</p><div class="closing-links"><a href="https://github.com/NoCoderRandom/sunsetscan">View source / star ↗</a><a href="https://github.com/NoCoderRandom/sunsetscan/discussions">GitHub Discussions ↗</a><a href="https://github.com/NoCoderRandom/sunsetscan/issues">Report an issue ↗</a><a href="https://github.com/NoCoderRandom/sunsetscan/blob/v2.2.1/data/hardware_eol/LICENSE.md">Database license ↗</a></div></div></div>
       </section>
     </main>
 
