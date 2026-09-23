@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SunsetScan — Find EOL devices on your local network</title>
-    <meta name="description" content="SunsetScan is an open-source Linux and WSL2 tool for local network inventory, exposed-service checks, and careful software and hardware lifecycle review. See a real lab report and install v2.2.1.">
+    <meta name="description" content="SunsetScan scans local networks with a hardware lifecycle database of 86,276 records across 224 vendors. Review device evidence, exposed services and EOL findings without an API call during scans.">
     <meta name="theme-color" content="#f5f2ea">
     <link rel="canonical" href="https://www.sunsetscan.com/">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
     <meta property="og:type" content="website">
     <meta property="og:title" content="SunsetScan — Find EOL devices on your local network">
-    <meta property="og:description" content="See what's on your network, which services are exposed, and which devices need a closer look at vendor support.">
+    <meta property="og:description" content="Local network scanning with hardware lifecycle evidence from 224 vendors. See real and illustrated report examples.">
     <meta property="og:url" content="https://www.sunsetscan.com/">
     <meta property="og:image" content="https://www.sunsetscan.com/assets/site-preview.png">
     <meta property="og:image:width" content="1200">
@@ -42,7 +42,7 @@
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
           <a href="#what-it-does">What it does</a>
           <a href="#evidence">Lifecycle data</a>
-          <a href="#sample">Real report</a>
+          <a href="#sample">Reports</a>
           <a href="#install">Install</a>
           <a class="nav-github" href="https://github.com/NoCoderRandom/sunsetscan">GitHub ↗</a>
         </nav>
@@ -53,12 +53,12 @@
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="container hero-layout">
           <div class="hero-copy">
-            <p class="eyebrow">Open-source network auditing · Linux / WSL2</p>
-            <h1 id="hero-title">Know which devices need a closer look.</h1>
-            <p class="lead">SunsetScan inventories your local network, checks exposed services, and compares detected software and devices with lifecycle evidence. Start with the finding, then inspect the source behind it.</p>
+            <p class="eyebrow">Open-source network auditing · 224 vendors · local lookups</p>
+            <h1 id="hero-title">Find network hardware that has lost support.</h1>
+            <p class="lead">Scan your local network from Linux or WSL2. SunsetScan finds devices and exposed services, then checks lifecycle evidence from 224 vendors using local data. See what needs attention and why.</p>
             <div class="hero-actions">
               <a class="button button-primary" href="#install">Install SunsetScan <span aria-hidden="true">↗</span></a>
-              <a class="under-link" href="#sample">See an actual lab report <span aria-hidden="true">↗</span></a>
+              <a class="under-link" href="#sample">See the reports <span aria-hidden="true">↗</span></a>
             </div>
             <p class="release-line">Current release <a href="https://github.com/NoCoderRandom/sunsetscan/releases/tag/v2.2.1">v2.2.1</a> · Scanner code MIT · Hardware data CC BY-NC 4.0</p>
           </div>
@@ -70,7 +70,7 @@
               <li><span>02</span><div><strong>Identify</strong><p>What can banners and device evidence tell us?</p></div></li>
               <li><span>03</span><div><strong>Review</strong><p>Which findings need a fix or vendor check?</p></div></li>
             </ol>
-            <div class="aside-foot">Runs locally. Scans can use downloaded data without an internet connection.</div>
+            <div class="aside-foot">After setup, lifecycle lookups use local data. Scans make no EOL API calls.</div>
           </aside>
         </div>
       </section>
@@ -93,8 +93,8 @@
       <section class="data-section" id="evidence" aria-labelledby="data-title">
         <div class="container">
           <div class="data-heading">
-            <div><p class="eyebrow">Hardware lifecycle data</p><h2 id="data-title">Coverage you can inspect.</h2></div>
-            <p>SunsetScan uses vendor lifecycle records to help you review support status for routers, cameras, NAS devices, switches and other network hardware.</p>
+            <div><p class="eyebrow">Hardware lifecycle data</p><h2 id="data-title">224 vendors. Checked locally.</h2></div>
+            <p>SunsetScan brings manufacturer lifecycle evidence into scans of routers, switches, cameras, NAS devices and related network gear. The database is installed locally, so a scan needs no online EOL lookup.</p>
           </div>
           <dl class="data-numbers">
             <div><dt>Lifecycle records</dt><dd>86,276</dd></div>
@@ -102,29 +102,27 @@
             <div><dt>Represented vendors</dt><dd>224</dd></div>
           </dl>
           <div class="data-bottom">
-            <p>The data covers home, office, enterprise, industrial and service-provider equipment. Smaller downloadable profiles are available; the Debian package includes the full validated database.</p>
+            <p>Manufacturer notices, support pages and product tables are mapped into one lifecycle model. The full validated database ships in the Debian package; smaller downloadable profiles are available for source installs.</p>
             <a class="under-link" href="https://github.com/NoCoderRandom/sunsetscan/blob/v2.2.1/data/hardware_eol/sunsetscan_hardware_eol_summary.json">Inspect the published database summary <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="guide-cta"><span>Unsure about your router?</span><a href="router-security-updates.html">Read the 3-minute support check <span aria-hidden="true">↗</span></a></div>
+          <p class="data-comparison">In our September 2026 check, SunsetScan covered <strong>224 vendors</strong>; <a href="https://eol.network/">eol.network</a> listed 55 and <a href="https://eosl.ai/dataset/">EOSL.ai</a> listed 19. <a href="hardware-eol-database.html">See the comparison and its limits ↗</a></p>
+          <div class="data-story"><p class="eyebrow">The work behind the numbers</p><h3>“End of life” means different things to different vendors.</h3><p>SunsetScan interprets vendor-specific terms, normalizes models and part numbers, removes duplicate entries and keeps unclear support claims marked for review. A discontinued label alone does not become a claim that security updates have stopped.</p></div>
+          <div class="data-actions"><a href="hardware-eol-database.html">See how the database compares <span aria-hidden="true">↗</span></a><a href="router-security-updates.html">Check your router’s support status <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
 
+      <section class="risk-section" aria-labelledby="risk-title">
+        <div class="container risk-layout"><div><p class="eyebrow">Why it matters</p><h2 id="risk-title">A router cannot patch itself after support ends.</h2></div><div><p>Network gear sits at the points where traffic enters, leaves and moves through a network. When its maker stops security updates, newly discovered flaws may remain open. Replace unsupported routers and switches on a planned timetable; restrict management access and isolate them while replacement is under way.</p><p class="risk-source">This advice follows guidance from the <a href="https://www.cyber.gc.ca/en/guidance/obsolete-products-itsap00095">Canadian Centre for Cyber Security</a> and <a href="https://www.cyber.gov.au/business-government/protecting-devices-systems/hardening-systems-applications/network-hardening/securing-edge-devices/mitigation-strategies-for-edge-devices-executive-guidance">Australian Cyber Security Centre</a>.</p></div></div>
+      </section>
+
       <section class="sample-section" id="sample" aria-labelledby="sample-title">
-        <div class="container sample-layout">
-          <div>
-            <p class="eyebrow">See the output</p>
-            <h2 id="sample-title">A real lab report, not a mockup.</h2>
-            <p>Open a sanitized HTML report from an authorized Raspberry Pi lab with deliberately vulnerable test services. It shows detected services, software lifecycle results, CVE matches and security checks. The sample was generated with v2.1.1; the current release is v2.2.1.</p>
-            <a class="button button-outline" href="sample-report.html">View the lab report <span aria-hidden="true">↗</span></a>
-            <p class="sample-source"><a href="https://github.com/NoCoderRandom/sunsetscan/blob/v2.2.1/docs/sample_reports/sunsetscan_lab_vulnerable_eol_v2_1_1_sample_20260528.html">Original report in the repository ↗</a></p>
-          </div>
-          <div class="sample-note">
-            <span class="note-label">WHAT THE REPORT SHOWS</span>
-            <p>Device and service evidence</p>
-            <p>Findings grouped by host and severity</p>
-            <p>Hardware lifecycle status and source context</p>
-            <p>Steps to investigate or resolve findings</p>
-            <small>Addresses and MAC information in the sample were replaced before publication.</small>
+        <div class="container">
+          <p class="eyebrow">See the output</p><h2 id="sample-title">See the finding. Then see the evidence.</h2>
+          <p class="sample-intro">Start with a real sanitized lab report. Explore two hardware lifecycle examples: an ASUS router requiring closer vendor review and a retired Cisco switch with a published security support deadline.</p>
+          <div class="report-grid">
+            <article class="report-tile"><span class="report-kind">01 / Actual report</span><h3>Real SunsetScan lab report</h3><p>Generated with v2.1.1 in an authorized Linux lab. Includes a TP-Link hardware lifecycle finding alongside service and software checks. Addresses and MAC data were sanitized.</p><a href="sample-report.html">Open the real report ↗</a><small><a href="https://github.com/NoCoderRandom/sunsetscan/blob/v2.2.1/docs/sample_reports/sunsetscan_lab_vulnerable_eol_v2_1_1_sample_20260528.html">Original file in the repository</a></small></article>
+            <article class="report-tile"><span class="report-kind">02 / Example report</span><h3>ASUS router: an EOL listing that needs review</h3><p>See how the source, a model match and uncertainty belong together when the vendor's published signals conflict.</p><a href="example-asus-router.html">Open the ASUS example ↗</a></article>
+            <article class="report-tile"><span class="report-kind">03 / Example report</span><h3>Cisco switch: security support has ended</h3><p>See a clear support deadline, the network risk and the next action for a retired Catalyst 2960-S.</p><a href="example-cisco-switch.html">Open the Cisco example ↗</a></article>
           </div>
         </div>
       </section>
