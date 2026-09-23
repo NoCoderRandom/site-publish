@@ -6,7 +6,7 @@
     <title>SunsetScan - Open-source EOL and network security scanning</title>
     <meta
       name="description"
-      content="SunsetScan is an open-source local network security scanner with device discovery, CVE checks, end-of-life detection, hardware lifecycle intelligence, and plain-English reports."
+      content="SunsetScan 2.2.1 audits local networks with device discovery, CVE checks, cautious hardware lifecycle evidence, and HTML reports."
     >
     <meta name="theme-color" content="#141414">
     <link rel="canonical" href="https://www.sunsetscan.com/">
@@ -17,7 +17,7 @@
     <meta property="og:title" content="SunsetScan - Open-source EOL and network security scanning">
     <meta
       property="og:description"
-      content="Find unsupported devices, exposed services, weak configurations, and fixable network risks with SunsetScan."
+      content="Review device lifecycle evidence, exposed services, and fixable network risks with SunsetScan 2.2.1."
     >
     <meta property="og:url" content="https://www.sunsetscan.com/">
     <meta property="og:image" content="https://www.sunsetscan.com/assets/report-preview.png">
@@ -29,7 +29,7 @@
         "name": "SunsetScan",
         "applicationCategory": "SecurityApplication",
         "operatingSystem": "Linux, WSL2",
-        "softwareVersion": "2.0.0",
+        "softwareVersion": "2.2.1",
         "url": "https://www.sunsetscan.com/",
         "sameAs": "https://github.com/NoCoderRandom/sunsetscan",
         "softwareHelp": "https://github.com/NoCoderRandom/sunsetscan",
@@ -72,14 +72,14 @@
           <p class="eyebrow">Open-source local network security auditing</p>
           <h1 id="hero-title">SunsetScan</h1>
           <p class="hero-copy">
-            Find unsupported devices, exposed services, weak configurations, and fixable security risks across your local network.
+            Find devices that need lifecycle review, exposed services, and fixable security risks across your local network.
           </p>
           <p class="hero-note">
             SunsetScan is published on GitHub as an MIT-licensed scanner for local, read-only network auditing.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button button-primary" href="https://github.com/NoCoderRandom/sunsetscan">View open-source project</a>
-            <a class="button button-secondary" href="#install">Install from GitHub</a>
+            <a class="button button-primary" href="https://github.com/NoCoderRandom/sunsetscan/releases/tag/v2.2.1">Get v2.2.1</a>
+            <a class="button button-secondary" href="#install">Installation guide</a>
           </div>
           <dl class="hero-facts" aria-label="Project facts">
             <div>
@@ -96,7 +96,7 @@
             </div>
             <div>
               <dt>Version</dt>
-              <dd>2.0.0</dd>
+              <dd>2.2.1</dd>
             </div>
           </dl>
         </div>
@@ -114,6 +114,9 @@
             </p>
             <p>
               The scanner is local, read-only, and designed for practical network hygiene: routers, switches, cameras, NAS devices, printers, access points, web interfaces, SSH, SMB, SNMP, FTP, TLS, DNS, UPnP, and mDNS.
+            </p>
+            <p>
+              The v2.2 releases expanded hardware coverage; v2.2.1 improves exports from both terminal menus. <a href="https://github.com/NoCoderRandom/sunsetscan/releases/tag/v2.2.1">Read the release notes</a>.
             </p>
           </div>
         </div>
@@ -160,30 +163,22 @@
               SunsetScan uses software EOL data from endoflife.date and a dedicated hardware lifecycle database for network gear, cameras, printers, NAS devices, security appliances, access points, service-provider equipment, and industrial/OT devices.
             </p>
             <p>
-              The hardware database now ships as smart EOL profiles, so a home install can stay small while office, enterprise, industrial, service-provider, and full profiles remain available for broader environments.
+              The hardware database is organized into home, office, enterprise, industrial, service-provider, and full profiles. The Debian package includes the complete validated database.
             </p>
           </div>
 
           <div class="metric-grid" aria-label="Current hardware EOL database snapshot">
             <div class="metric-card">
-              <span class="metric-value">64,245</span>
+              <span class="metric-value">86,276</span>
               <span class="metric-label">hardware lifecycle records</span>
             </div>
             <div class="metric-card">
-              <span class="metric-value">51,452</span>
+              <span class="metric-value">81,738</span>
               <span class="metric-label">model summaries</span>
             </div>
             <div class="metric-card">
-              <span class="metric-value">122</span>
+              <span class="metric-value">224</span>
               <span class="metric-label">represented vendors</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-value">37,560</span>
-              <span class="metric-label">records with security updates confirmed ended</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-value">8,338</span>
-              <span class="metric-label">records with security updates confirmed continuing</span>
             </div>
             <div class="metric-card">
               <span class="metric-value">6</span>
@@ -195,7 +190,7 @@
         <div class="container smart-pack-layout" aria-labelledby="smart-pack-title">
           <div class="smart-pack-copy">
             <p class="eyebrow">Smart EOL profiles</p>
-            <h3 id="smart-pack-title">Download only the device coverage you need.</h3>
+            <h3 id="smart-pack-title">Choose the device coverage you need.</h3>
             <p>
               Profiles are built from validated local artifacts and loaded during scans without external API calls.
             </p>
@@ -204,32 +199,32 @@
           <div class="profile-grid" aria-label="Hardware EOL smart-pack profiles">
             <article class="profile-card">
               <span class="profile-name">Home</span>
-              <span class="profile-stats">14,676 records, 5.07 MiB</span>
+              <span class="profile-stats">13,366 records</span>
               <p>Consumer routers, cameras, NAS, printers, access points, and smart-home gear.</p>
             </article>
             <article class="profile-card">
               <span class="profile-name">Office</span>
-              <span class="profile-stats">18,939 records, 6.39 MiB</span>
+              <span class="profile-stats">22,629 records</span>
               <p>Small offices, prosumer labs, managed SMB networks, and ordinary office equipment.</p>
             </article>
             <article class="profile-card">
               <span class="profile-name">Enterprise</span>
-              <span class="profile-stats">58,405 records, 19.77 MiB</span>
+              <span class="profile-stats">79,377 records</span>
               <p>Campus, datacenter, enterprise security, routing, switching, and mixed networks.</p>
             </article>
             <article class="profile-card">
               <span class="profile-name">Industrial</span>
-              <span class="profile-stats">20,247 records, 6.85 MiB</span>
+              <span class="profile-stats">24,763 records</span>
               <p>Industrial/OT sites plus the ordinary office network gear often found alongside them.</p>
             </article>
             <article class="profile-card">
               <span class="profile-name">Service provider</span>
-              <span class="profile-stats">62,937 records, 21.58 MiB</span>
+              <span class="profile-stats">84,142 records</span>
               <p>ISP, carrier, telco, optical, access-network, enterprise, office, and home coverage.</p>
             </article>
             <article class="profile-card">
               <span class="profile-name">Full</span>
-              <span class="profile-stats">64,245 records, 22.04 MiB</span>
+              <span class="profile-stats">86,276 records</span>
               <p>Every hardware lifecycle record in one local install for the broadest audits.</p>
             </article>
           </div>
@@ -303,8 +298,8 @@
           </div>
 
           <figure class="report-preview">
-            <img src="assets/report-preview.png" alt="Preview of a SunsetScan network assessment report with severity counts, EOL status, and prioritized findings" width="1440" height="960" loading="lazy">
-            <figcaption>Product-style report preview based on SunsetScan 2.0.0 capabilities.</figcaption>
+            <img src="assets/report-preview.png" alt="Illustration of a network assessment with severity groups and example findings" width="1440" height="960" loading="lazy">
+            <figcaption>Illustrative report concept. Actual exported reports include scan evidence and vary by network.</figcaption>
           </figure>
         </div>
       </section>
@@ -313,24 +308,34 @@
         <div class="container install-layout">
           <div>
             <p class="eyebrow">Install today</p>
-            <h2 id="install-title">Install SunsetScan from the current GitHub repository.</h2>
+            <h2 id="install-title">Get SunsetScan v2.2.1.</h2>
             <p>
-              The code is open source and available now. Linux is the best supported platform, and WSL2 is the recommended route for Windows users.
+              The Debian package works on Debian-family systems, including Ubuntu and Kali. Other Linux distributions can install from source. On Windows, use WSL2.
             </p>
+            <div class="link-row">
+              <a class="text-link" href="https://github.com/NoCoderRandom/sunsetscan/releases/download/v2.2.1/sunsetscan_2.2.1-1_all.deb">Download Debian package</a>
+              <a class="text-link" href="https://github.com/NoCoderRandom/sunsetscan/releases/download/v2.2.1/sunsetscan_2.2.1-1_all.deb.sha256">SHA-256 checksum</a>
+              <a class="text-link" href="https://github.com/NoCoderRandom/sunsetscan/releases/tag/v2.2.1">Release notes and source</a>
+            </div>
           </div>
 
           <div class="command-panel" aria-label="Installation commands">
             <div class="command-header">
-              <span>Recommended bootstrap</span>
-              <button class="copy-button" type="button" data-copy="curl -fsSL https://raw.githubusercontent.com/NoCoderRandom/sunsetscan/main/bootstrap.sh | bash">Copy</button>
+              <span>Debian, Ubuntu, Kali</span>
+              <button class="copy-button" type="button" data-copy="sha256sum -c sunsetscan_2.2.1-1_all.deb.sha256&#10;sudo apt install ./sunsetscan_2.2.1-1_all.deb&#10;sudo sunsetscan --setup&#10;sudo sunsetscan">Copy</button>
             </div>
-            <pre><code>curl -fsSL https://raw.githubusercontent.com/NoCoderRandom/sunsetscan/main/bootstrap.sh | bash</code></pre>
+            <pre><code>sha256sum -c sunsetscan_2.2.1-1_all.deb.sha256
+sudo apt install ./sunsetscan_2.2.1-1_all.deb
+sudo sunsetscan --setup
+sudo sunsetscan</code></pre>
             <div class="command-header">
-              <span>First assessment</span>
-              <button class="copy-button" type="button" data-copy="sudo ./sunsetscan --setup&#10;sudo ./sunsetscan --full-assessment --target 192.168.1.0/24">Copy</button>
+              <span>Other Linux distributions</span>
+              <button class="copy-button" type="button" data-copy="git clone https://github.com/NoCoderRandom/sunsetscan.git&#10;cd sunsetscan&#10;./install.sh&#10;./sunsetscan">Copy</button>
             </div>
-            <pre><code>sudo ./sunsetscan --setup
-sudo ./sunsetscan --full-assessment --target 192.168.1.0/24</code></pre>
+            <pre><code>git clone https://github.com/NoCoderRandom/sunsetscan.git
+cd sunsetscan
+./install.sh
+./sunsetscan</code></pre>
           </div>
         </div>
       </section>

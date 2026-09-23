@@ -187,11 +187,8 @@ select {
   align-items: center;
   padding: 8.8rem 0 5.4rem;
   background:
-    linear-gradient(90deg, rgba(20, 20, 20, 0.96) 0%, rgba(20, 20, 20, 0.9) 39%, rgba(20, 20, 20, 0.48) 72%, rgba(20, 20, 20, 0.72) 100%),
-    url("assets/report-preview.png");
-  background-position: center, right 8% center;
-  background-repeat: no-repeat;
-  background-size: cover, min(920px, 72%) auto;
+    radial-gradient(circle at 78% 36%, rgba(15, 118, 110, 0.28), transparent 42%),
+    linear-gradient(110deg, #141414, #253530);
   color: #fff;
 }
 
@@ -841,11 +838,7 @@ code {
   .hero {
     min-height: 82svh;
     padding: 7.2rem 0 4rem;
-    background:
-      linear-gradient(180deg, rgba(20, 20, 20, 0.95) 0%, rgba(20, 20, 20, 0.86) 54%, rgba(20, 20, 20, 0.92) 100%),
-      url("assets/report-preview.png");
-    background-size: cover, 880px auto;
-    background-position: center, center bottom;
+    background: linear-gradient(145deg, #141414, #253530);
   }
 
   h1 {
