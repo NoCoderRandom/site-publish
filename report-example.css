@@ -44,3 +44,8 @@ a { color:#1d4ed8; text-underline-offset:3px; }
 .report-footer { padding:1.5rem 0; color:var(--muted); font-size:.82rem; }
 @media(max-width:700px){.report-header{flex-direction:column;padding:1.4rem}.meta-bar{grid-template-columns:1fr 1fr;padding:1rem 1.4rem}.report-section{padding:1.4rem}.report-tag{align-self:start}}
 @media(max-width:440px){.meta-bar{grid-template-columns:1fr}}
+
+.report-next { background:#eef3f9; }
+.report-next p { max-width:700px; margin-bottom:1.4rem; }
+.report-button { display:inline-block; padding:.75rem 1rem; background:#1e40af; color:#fff; font-weight:750; text-decoration:none; }
+.report-button:hover { background:#16327f; }

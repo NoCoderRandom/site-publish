@@ -204,3 +204,10 @@ code { font: .74rem/1.8 ui-monospace, SFMono-Regular, Consolas, monospace; }
 .comparison-note { font-size: .86rem; color: var(--muted); }
 @media (max-width: 950px) { .report-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 700px) { .risk-layout,.report-grid { grid-template-columns: 1fr; } .report-tile { min-height: 0; } }
+
+.hero-proof { margin: 1.1rem 0 0; color: var(--muted); font-size: .88rem; font-weight: 650; }
+.hero-proof + .release-line { margin-top: .55rem; }
+.risk-action { display: inline-block; margin-top: 1.35rem; }
+.report-peek { display: flex; align-items: center; gap: .6rem; margin: .2rem 0 1.4rem; padding: .7rem .8rem; background: #fffdf8; border: 1px solid var(--line); color: var(--ink); font-size: .77rem; font-weight: 700; line-height: 1.3; }
+.peek-severity { flex: none; padding: .15rem .34rem; background: #f7ddcf; color: #8d391e; font: 800 .65rem ui-monospace,SFMono-Regular,Consolas,monospace; }
+.peek-review { background: #f7e9b9; color: #79530a; }
