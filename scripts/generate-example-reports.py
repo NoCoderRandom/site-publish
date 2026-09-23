@@ -19,8 +19,8 @@ def main() -> None:
     site = Path(__file__).resolve().parent.parent
     sys.path.insert(0, str(scanner))
 
-    from core.device_identifier import DeviceIdentity
-    from core.findings import FindingRegistry, Severity
+    from core.device_identifier import DeviceIdentifier
+    from core.findings import Finding, FindingRegistry, Severity
     from core.hardware_eol import HardwareEOLDatabase
     from core.scanner import HostInfo, ScanResult
     from sunsetscan import SunsetScan
@@ -53,9 +53,23 @@ def main() -> None:
         result = ScanResult(target=ip, profile="QUICK", start_time=started,
                             end_time=started + timedelta(seconds=12))
         result.hosts[ip] = HostInfo(ip=ip, state="up", vendor=vendor)
-        # The UPnP extractor assigns 0.75 when a device exposes its model.
-        identity = DeviceIdentity(vendor=vendor, model=model, device_type="Router",
-                                  confidence=0.75, sources=["upnp"])
+        # Model disclosure through UPnP is one supported identification path.
+        # Let the released identifier calculate vendor, model and confidence.
+        discovery = Finding(
+            severity=Severity.INFO,
+            title=f"UPnP device found: {model}",
+            host=ip,
+            category="UPnP",
+            description=(
+                f"Device: {model!r}, Type: 'InternetGatewayDevice', "
+                f"Manufacturer: {vendor!r}, Server: '', Services: 0"
+            ),
+            explanation="",
+            recommendation="",
+        )
+        identity = DeviceIdentifier().identify(ip, result.hosts[ip], [discovery])
+        assert (identity.vendor, identity.model) == (vendor, model), identity
+        assert "upnp" in identity.sources, identity
         converter.hardware_eol = db
         converter.last_device_identities = {ip: identity}
         emitted = converter._run_hardware_eol_pipeline(result)
