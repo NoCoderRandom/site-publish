@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SunsetScan Security Report — 192.0.2.10</title>
+<title>SunsetScan Security Report — 192.0.2.20</title>
 <style>
   /* ===== RESET & BASE ===== */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -378,8 +378,8 @@
   }
 </style>
 <style>.example-site-banner{max-width:1300px;margin:16px auto 0;padding:10px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#fff;border:1px solid #e2e8f0;color:#334155;font:600 13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.example-site-banner a{color:#2563eb}</style>
-<meta name="description" content="SunsetScan v2.2.1 example report: ASUS RT-AC68U hardware lifecycle finding.">
-<link rel="canonical" href="https://www.sunsetscan.com/example-asus-router.html">
+<meta name="description" content="SunsetScan v2.2.1 example report: Linksys WRT1900AC hardware lifecycle finding.">
+<link rel="canonical" href="https://www.sunsetscan.com/example-linksys-router.html">
 </head>
 <body>
 <div class="example-site-banner"><strong>Example report · SunsetScan v2.2.1</strong><a href="/#sample">← All example reports</a></div>
@@ -393,7 +393,7 @@
       <div class="subtitle">Network Security &amp; Lifecycle Assessment Tool &bull; v2.2.1</div>
     </div>
     <div class="report-meta-right">
-      <strong>192.0.2.10</strong>
+      <strong>192.0.2.20</strong>
       2026-09-23 10:00:00<br>
       Profile: QUICK
     </div>
@@ -418,13 +418,13 @@
         <div><div class="count">0</div><div class="label">Critical</div></div>
       </div>
       <div class="badge high">
-        <div><div class="count">0</div><div class="label">High</div></div>
+        <div><div class="count">1</div><div class="label">High</div></div>
       </div>
       <div class="badge medium">
         <div><div class="count">0</div><div class="label">Medium</div></div>
       </div>
       <div class="badge low">
-        <div><div class="count">1</div><div class="label">Low</div></div>
+        <div><div class="count">0</div><div class="label">Low</div></div>
       </div>
       <div class="badge info">
         <div><div class="count">0</div><div class="label">Info</div></div>
@@ -435,9 +435,9 @@
 
     <div class="severity-bar">
 
+          <div class="seg-high"     style="width:100.0%"></div>
 
 
-           <div class="seg-low"      style="width:100.0%"></div>
 
     </div>
 
@@ -454,20 +454,22 @@
   <div class="exec-summary">
     <div class="exec-summary-title">&#128196; Executive Summary</div>
 
-    <div class="exec-summary-headline posture-low">
-      Good security posture — only minor issues found
+    <div class="exec-summary-headline posture-high">
+      High-risk issues found — 1 item(s) require prompt attention
     </div>
     <div class="exec-summary-body">
-      <p>SunsetScan scanned 1 active device(s) on 192.0.2.10 using the QUICK profile and found 1 device finding(s). Devices online: 192.0.2.10 (ASUS).</p>
+      <p>SunsetScan scanned 1 active device(s) on 192.0.2.20 using the QUICK profile and found 1 device finding(s). Devices online: 192.0.2.20 (Linksys).</p>
 
       <ul>
 
-        <li>1 low-severity finding(s) — address when convenient</li>
+        <li>1 high-severity finding(s) — remediate within 7 days</li>
+
+        <li>Category with most issues: Hardware Lifecycle (1 finding(s))</li>
 
       </ul>
 
 
-      <p style="margin-top:8px;"><strong>Recommended next step:</strong> Network security posture is good. Continue monitoring for new devices, apply firmware updates regularly, and re-scan monthly or after network changes.</p>
+      <p style="margin-top:8px;"><strong>Recommended next step:</strong> Review the high-severity findings and follow their specific remediation steps within the week.</p>
 
     </div>
 
@@ -493,11 +495,11 @@
 
 
       <div class="topo-device ">
-        <div class="topo-device-ip">192.0.2.10</div>
+        <div class="topo-device-ip">192.0.2.20</div>
 
 
         <div class="topo-device-id-type">Router</div>
-        <div class="topo-device-id">ASUS RT-AC68U</div>
+        <div class="topo-device-id">Linksys WRT1900AC</div>
 
 
 
@@ -505,7 +507,7 @@
 
 
 
-          <div class="topo-device-badge sev-info">No issues</div>
+          <div class="topo-device-badge sev-high">1 High</div>
 
 
         <div class="topo-device-ports">0 open port(s): </div>
@@ -538,12 +540,12 @@
         <tbody>
 
 
-          <tr onclick="scrollToHost('192.0.2.10')" style="cursor:pointer;" title="Click to go to host section">
-            <td style="font-family:monospace; font-weight:600;">192.0.2.10</td>
+          <tr onclick="scrollToHost('192.0.2.20')" style="cursor:pointer;" title="Click to go to host section">
+            <td style="font-family:monospace; font-weight:600;">192.0.2.20</td>
             <td>—</td>
             <td>Router</td>
-            <td style="font-weight:600;">ASUS</td>
-            <td>RT-AC68U</td>
+            <td style="font-weight:600;">Linksys</td>
+            <td>WRT1900AC</td>
             <td style="font-family:monospace;">—</td>
             <td>
 
@@ -581,12 +583,12 @@
         </thead>
         <tbody>
 
-          <tr onclick="scrollToHost('192.0.2.10')" title="Click to go to host section">
-            <td><span class="sev-badge sev-low">LOW</span></td>
-            <td style="font-family:monospace; white-space:nowrap;">192.0.2.10</td>
+          <tr onclick="scrollToHost('192.0.2.20')" title="Click to go to host section">
+            <td><span class="sev-badge sev-high">HIGH</span></td>
+            <td style="font-family:monospace; white-space:nowrap;">192.0.2.20</td>
             <td style="font-family:monospace; white-space:nowrap;"></td>
             <td style="white-space:nowrap; font-size:0.78rem; color:#6b7280;">Hardware Lifecycle</td>
-            <td>ASUS RT-AC68U lifecycle review needed</td>
+            <td>Linksys WRT1900AC no longer receives security updates</td>
           </tr>
 
         </tbody>
@@ -604,37 +606,37 @@
 
 
 
-    <div class="host-section" id="host-192-0-2-10">
+    <div class="host-section" id="host-192-0-2-20">
 
       <!-- Host header (clickable to collapse) -->
-      <div class="host-header" onclick="toggleHost('192-0-2-10')">
+      <div class="host-header" onclick="toggleHost('192-0-2-20')">
         <div>
-          <span class="host-ip">192.0.2.10</span>
+          <span class="host-ip">192.0.2.20</span>
 
 
 
-          <span class="host-name">&bull; ASUS RT-AC68U (Router)</span>
+          <span class="host-name">&bull; Linksys WRT1900AC (Router)</span>
 
         </div>
         <div class="host-badges">
 
 
+              <span class="sev-badge sev-high">1 High</span>
 
 
-               <span class="sev-badge sev-low">1 Low</span>
 
 
-          <span class="toggle" id="toggle-192-0-2-10">&#9660;</span>
+          <span class="toggle" id="toggle-192-0-2-20">&#9660;</span>
         </div>
       </div>
 
       <!-- Host body -->
-      <div class="host-body" id="body-192-0-2-10">
+      <div class="host-body" id="body-192-0-2-20">
 
         <!-- Host metadata -->
         <div class="host-meta">
 
-          <span>Vendor: ASUS</span>
+          <span>Vendor: Linksys</span>
 
           <span>State: up</span>
           <span>Open ports: 0</span>
@@ -644,7 +646,7 @@
         <div style="margin-bottom: 14px;">
           <div class="device-id-badge">
             <span class="did-type">Router</span> &mdash;
-            ASUS RT-AC68U
+            Linksys WRT1900AC
 
             <span class="did-conf">75% confidence</span>
           </div>
@@ -655,29 +657,27 @@
 
         <div style="margin-bottom:16px;">
 
-          <div class="finding-card border-low">
-            <div class="finding-card-header sev-low" style="opacity:0.95;">
-              <span class="sev-badge sev-low">LOW</span>
-              <span class="finding-title">ASUS RT-AC68U lifecycle review needed</span>
-
-              <span class="sev-badge confidence-suspected" style="font-size:0.68rem;">SUSPECTED</span>
+          <div class="finding-card border-high">
+            <div class="finding-card-header sev-high" style="opacity:0.95;">
+              <span class="sev-badge sev-high">HIGH</span>
+              <span class="finding-title">Linksys WRT1900AC no longer receives security updates</span>
 
 
             </div>
             <div class="finding-card-body">
               <div class="finding-section-lbl">What was found</div>
-              <div class="finding-text">ASUS RT-AC68U appears in vendor lifecycle data, but the source does not prove that firmware or security updates have stopped. ASUS source data lists this model on an EOL/compliance source, but ASUS firmware pages can still publish newer firmware/security releases after the listed date. Treat as lifecycle review until a product-specific firmware feed confirms security updates have stopped.</div>
+              <div class="finding-text">Linksys WRT1900AC matched hardware lifecycle data with status &#39;unsupported&#39;. Security/support updates ended on 2023-12-04.</div>
 
               <div class="finding-section-lbl" style="margin-top:12px;">What this means</div>
-              <div class="finding-text">Vendors use terms such as EOL, discontinued, end of sale, and support ended differently. SunsetScan keeps this as a review finding instead of a confirmed unsupported finding when the evidence is ambiguous or may conflict with firmware release data.</div>
+              <div class="finding-text">Vendor lifecycle data indicates this hardware no longer receives security updates on 2023-12-04. New vulnerabilities may remain unpatched even if the device&#39;s exposed services are configured correctly.</div>
 
               <div class="finding-section-lbl" style="margin-top:12px;">What to do</div>
-              <div class="finding-reco">1. Check the vendor firmware/support page for this exact model and hardware revision.
-2. Confirm whether recent firmware or security signature updates are still available.
-3. If vendor security updates have truly stopped, plan replacement or isolate the device on a restricted network segment.</div>
+              <div class="finding-reco">1. Confirm the exact model, hardware revision, and region from the device label or admin UI.
+2. Apply the newest firmware still offered by the vendor.
+3. If the vendor no longer provides security updates for this hardware, plan replacement or isolate the device on a restricted network segment.</div>
 
 
-              <div class="finding-evidence">Evidence: Hardware lifecycle records: hw_asus_7775bd78408a849e; status counts: {&#39;lifecycle_review&#39;: 5}; hardware revision seen: not detected; source: https://www.asus.com/event/network/eol-product/</div>
+              <div class="finding-evidence">Evidence: Hardware EOL records: hw_linksys_2b961364472e3c55; security EOL date: 2023-12-04; hardware revision seen: not detected; source: https://www.linksys.com/pages/linksys-product-end-of-life</div>
 
 
 
@@ -699,12 +699,24 @@
 
 
   <div class="section">
-    <div class="section-title">&#9989; Recommended Actions</div>
-    <p style="color:#374151; font-size:0.88rem;">
-      No critical, high, or medium remediation actions were found in this scan.
-      Continue routine monitoring and review any low-severity informational
-      findings in the host details above.
-    </p>
+    <div class="section-title">&#9989; Recommended Actions (by priority)</div>
+    <ul class="reco-list">
+
+      <li>
+        <div class="reco-num">1</div>
+        <div>
+          <div style="margin-bottom:4px;">
+            <span class="sev-badge sev-high">HIGH</span>
+            &nbsp;<strong>Linksys WRT1900AC no longer receives security updates</strong>
+            &nbsp;<span class="reco-item-host">192.0.2.20</span>
+          </div>
+          <div class="finding-reco" style="color:#374151;">1. Confirm the exact model, hardware revision, and region from the device label or admin UI.
+2. Apply the newest firmware still offered by the vendor.
+3. If the vendor no longer provides security updates for this hardware, plan replacement or isolate the device on a restricted network segment.</div>
+        </div>
+      </li>
+
+    </ul>
   </div>
 
 
